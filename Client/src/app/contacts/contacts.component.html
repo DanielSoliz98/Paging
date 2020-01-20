@@ -1,0 +1,52 @@
+<p>
+  You can bind our <code>NgbPagination</code> component with slicing the data
+  list
+</p>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let contact of data">
+      <td>{{ contact.id }}</td>
+      <td>{{ contact.firstName }}</td>
+      <td>{{ contact.lastName }}</td>
+      <td>{{ contact.email }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="d-flex justify-content-center p-2">
+  <ul class="pagination">
+    <li class="page-item">
+      <button class="page-link" (click)="getData(page - 1)">Previous</button>
+    </li>
+    <li class="page-item active">
+      <button class="page-link">{{ page }}</button>
+    </li>
+    <li class="page-item">
+      <button class="page-link" (click)="getData(page + 1)">Next</button>
+    </li>
+  </ul>
+</div>
+
+<div class="d-flex justify-content-between p-2">
+  <ngb-pagination
+    [collectionSize]="collectionSize"
+    [(page)]="page"
+    [pageSize]="pageSize"
+  >
+  </ngb-pagination>
+
+  <select class="custom-select" style="width: auto" [(ngModel)]="pageSize">
+    <option [ngValue]="3">3 items per page</option>
+    <option [ngValue]="5">5 items per page</option>
+    <option [ngValue]="10">10 items per page</option>
+  </select>
+</div>
