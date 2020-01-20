@@ -14,6 +14,8 @@ export class ContactsComponent implements OnInit {
   pageSize = 5;
   collectionSize: number;
   pageCount: number;
+  previous: boolean = false;
+  next: boolean = true;
 
   constructor(private service: ContactService) { }
 
@@ -32,8 +34,18 @@ export class ContactsComponent implements OnInit {
   }
 
   getData(pageNumber: number) {
-    if(pageNumber >= 1 && pageNumber <= this.pageCount){
-      this.service.getContacts(pageNumber).subscribe(item=>{
+    if (pageNumber >= 1 && pageNumber <= this.pageCount) {
+      if (pageNumber == 1) {
+        this.previous = false;
+      } else {
+        if (pageNumber == this.pageCount) {
+          this.next = false;
+        } else {
+          this.previous = true;
+          this.next = true;
+        }
+      }
+      this.service.getContacts(pageNumber).subscribe(item => {
         this.data = item.data;
         this.page = item.page;
       })

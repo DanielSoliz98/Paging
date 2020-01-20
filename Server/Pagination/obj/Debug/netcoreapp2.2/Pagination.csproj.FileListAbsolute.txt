@@ -12,3 +12,17 @@ C:\Users\Administrator\source\repos\Pagination\Pagination\bin\Debug\netcoreapp2.
 C:\Users\Administrator\source\repos\Pagination\Pagination\obj\Debug\netcoreapp2.2\Pagination.dll
 C:\Users\Administrator\source\repos\Pagination\Pagination\obj\Debug\netcoreapp2.2\Pagination.pdb
 C:\Users\Administrator\source\repos\Pagination\Pagination\obj\Debug\netcoreapp2.2\Pagination.csprojAssemblyReference.cache
+C:\Users\Administrator\Documents\Pagination\Server\Pagination\bin\Debug\netcoreapp2.2\Pagination.deps.json
+C:\Users\Administrator\Documents\Pagination\Server\Pagination\bin\Debug\netcoreapp2.2\Pagination.runtimeconfig.json
+C:\Users\Administrator\Documents\Pagination\Server\Pagination\bin\Debug\netcoreapp2.2\Pagination.runtimeconfig.dev.json
+C:\Users\Administrator\Documents\Pagination\Server\Pagination\bin\Debug\netcoreapp2.2\Pagination.dll
+C:\Users\Administrator\Documents\Pagination\Server\Pagination\bin\Debug\netcoreapp2.2\Pagination.pdb
+C:\Users\Administrator\Documents\Pagination\Server\Pagination\obj\Debug\netcoreapp2.2\Pagination.csprojAssemblyReference.cache
+C:\Users\Administrator\Documents\Pagination\Server\Pagination\obj\Debug\netcoreapp2.2\Pagination.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Documents\Pagination\Server\Pagination\obj\Debug\netcoreapp2.2\Pagination.RazorAssemblyInfo.cache
+C:\Users\Administrator\Documents\Pagination\Server\Pagination\obj\Debug\netcoreapp2.2\Pagination.RazorAssemblyInfo.cs
+C:\Users\Administrator\Documents\Pagination\Server\Pagination\obj\Debug\netcoreapp2.2\Pagination.AssemblyInfoInputs.cache
+C:\Users\Administrator\Documents\Pagination\Server\Pagination\obj\Debug\netcoreapp2.2\Pagination.AssemblyInfo.cs
+C:\Users\Administrator\Documents\Pagination\Server\Pagination\obj\Debug\netcoreapp2.2\Pagination.RazorTargetAssemblyInfo.cache
+C:\Users\Administrator\Documents\Pagination\Server\Pagination\obj\Debug\netcoreapp2.2\Pagination.dll
+C:\Users\Administrator\Documents\Pagination\Server\Pagination\obj\Debug\netcoreapp2.2\Pagination.pdb
