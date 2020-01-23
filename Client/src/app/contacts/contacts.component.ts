@@ -27,6 +27,9 @@ export class ContactsComponent implements OnInit {
       this.data = item.data;
       this.totalCount = item.totalCount;
       this.pageCount = item.pageCount;
+      if (this.pageCount == 1) {
+        this.next = false;
+      }
       this.page = item.page;
     });
   }
