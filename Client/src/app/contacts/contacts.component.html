@@ -21,7 +21,7 @@
     </tr>
   </tbody>
 </table>
-
+<app-pagination [pageNumber]="page" [pageSize]="pageSize" [totalCount]="totalCount" [pageCount]="pageCount"></app-pagination>
 <div class="d-flex justify-content-center p-2">
   <ul class="pagination">
     <li [className]="!previous ? 'page-item disabled' : 'page-item'">

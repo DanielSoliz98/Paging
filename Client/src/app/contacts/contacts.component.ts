@@ -16,10 +16,12 @@ export class ContactsComponent implements OnInit {
   previous: boolean = false;
   next: boolean = true;
 
-  constructor(private service: ContactService) { }
+  constructor(private service: ContactService) { 
+    this.getContacts();
+  }
 
   ngOnInit() {
-    this.getContacts();
+   
   }
 
   getContacts() {

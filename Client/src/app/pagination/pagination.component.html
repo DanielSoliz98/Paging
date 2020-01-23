@@ -1,0 +1,13 @@
+<div class="d-flex justify-content-center p-2">
+    <ul class="pagination">
+      <li [className]="!previous ? 'page-item disabled' : 'page-item'">
+        <button type="button" class="page-link" (click)="getPreviousPage()">Previous</button>
+      </li>
+      <li *ngFor="let page of pages" [className]="page == pageNumber ? 'page-item active' : 'page-item'">
+        <button class="page-link">{{ page }}</button>
+      </li>
+      <li [className]="!next ? 'page-item disabled' : 'page-item'">
+        <button type="button" class="page-link" (click)="getNextPage()">Next</button>
+      </li>
+    </ul>
+  </div>
