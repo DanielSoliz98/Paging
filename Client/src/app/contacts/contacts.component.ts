@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import PageList from '../services/page-list';
 import { ContactService } from '../services/contact.service';
 
 @Component({
@@ -12,7 +11,7 @@ export class ContactsComponent implements OnInit {
   data: [];
   page = 1;
   pageSize = 5;
-  collectionSize: number;
+  totalCount: number;
   pageCount: number;
   previous: boolean = false;
   next: boolean = true;
@@ -26,10 +25,9 @@ export class ContactsComponent implements OnInit {
   getContacts() {
     this.service.getContacts().subscribe(item => {
       this.data = item.data;
-      this.collectionSize = item.totalCount;
+      this.totalCount = item.totalCount;
       this.pageCount = item.pageCount;
       this.page = item.page;
-      console.log(item);
     });
   }
 
