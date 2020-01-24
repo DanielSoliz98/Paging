@@ -13,15 +13,13 @@ export class ContactsComponent implements OnInit {
   pageSize = 5;
   totalCount: number;
   pageCount: number;
-  previous: boolean = false;
-  next: boolean = true;
 
-  constructor(private service: ContactService) { 
+  constructor(private service: ContactService) {
     this.getContacts();
   }
 
   ngOnInit() {
-   
+
   }
 
   getContacts() {
@@ -29,29 +27,14 @@ export class ContactsComponent implements OnInit {
       this.data = item.data;
       this.totalCount = item.totalCount;
       this.pageCount = item.pageCount;
-      if (this.pageCount == 1) {
-        this.next = false;
-      }
       this.page = item.page;
     });
   }
 
-  getData(pageNumber: number) {
-    if (pageNumber >= 1 && pageNumber <= this.pageCount) {
-      if (pageNumber == 1) {
-        this.previous = false;
-      } else {
-        if (pageNumber == this.pageCount) {
-          this.next = false;
-        } else {
-          this.previous = true;
-          this.next = true;
-        }
-      }
-      this.service.getContacts(pageNumber).subscribe(item => {
-        this.data = item.data;
-        this.page = item.page;
-      })
-    }
+  public getPage(pageNumber: number) {
+    this.service.getContacts(pageNumber).subscribe(item => {
+      this.data = item.data;
+      this.page = item.page;
+    });
   }
 }

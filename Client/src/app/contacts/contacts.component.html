@@ -1,7 +1,4 @@
-<p>
-  You can bind our <code>NgbPagination</code> component with slicing the data
-  list
-</p>
+<h1 class="text-center">PAGINATION ON TABLE</h1>
 
 <table class="table table-striped">
   <thead>
@@ -21,17 +18,10 @@
     </tr>
   </tbody>
 </table>
-<app-pagination [pageNumber]="page" [pageSize]="pageSize" [totalCount]="totalCount" [pageCount]="pageCount"></app-pagination>
-<div class="d-flex justify-content-center p-2">
-  <ul class="pagination">
-    <li [className]="!previous ? 'page-item disabled' : 'page-item'">
-      <button type="button" class="page-link" (click)="getData(page - 1)">Previous</button>
-    </li>
-    <li class="page-item active">
-      <button class="page-link">{{ page }}</button>
-    </li>
-    <li [className]="!next ? 'page-item disabled' : 'page-item'">
-      <button type="button" class="page-link" (click)="getData(page + 1)">Next</button>
-    </li>
-  </ul>
-</div>
+<app-pagination
+  [pageNumber]="page"
+  [pageSize]="pageSize"
+  [totalCount]="totalCount"
+  [pageCount]="pageCount"
+  (actualPage)="getPage($event)"
+></app-pagination>
