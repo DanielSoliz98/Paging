@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, OnChanges, Output, EventEmitter } from '@angular/core';
+import { Component, Input, OnChanges, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-pagination',
@@ -26,7 +26,7 @@ export class PaginationComponent implements OnChanges {
     this.pages = Array.from({ length: this.pageCount }, (v, k) => k + 1);
   }
 
-  private updateButtons(){
+  private updateButtons() {
     if (this.pageNumber >= 1 && this.pageNumber <= this.pageCount) {
       if (this.pageNumber == 1) {
         this.previous = false;
